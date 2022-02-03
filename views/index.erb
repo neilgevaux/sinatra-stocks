@@ -1,4 +1,23 @@
-    <p>Pick a company</p>
+<p>Pick a stock</p>
+ <form action='stocks' method='post'>
+    <div class="form-group">
+        <label for="tickerSymbol">Ticker symbol</label>
+        <input type="text" class="form-control" id="tickerSymbol" aria-describedby="emailHelp" placeholder="e.g. AAPL">
+        <small id="tickerHelp" class="form-text text-muted">You have to know the ticker you need at this stage—sorry!</small>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+<% StockQuote::Stock.new(api_key: '') %>
+
+<% stock = StockQuote::Stock.quote("fb") %>
+
+<%= stock.company_name %>
+
+
+
+ <!--
+    
     <form action='stocks' method='post'>
       <ul class='unstyled'>
         <% Stocks.each do |id, text| %>
@@ -12,3 +31,5 @@
       </ul>
       <button type='submit' class='btn btn-primary'>Select</button>
     </form>
+    
+  -->

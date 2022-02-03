@@ -1,5 +1,6 @@
 require 'sinatra'
 require 'yaml/store'
+require 'stock_quote'
 
 get '/' do
   @title = 'Welcome to Stocks!'
