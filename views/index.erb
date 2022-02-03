@@ -1,0 +1,14 @@
+    <p>Pick a company</p>
+    <form action='stocks' method='post'>
+      <ul class='unstyled'>
+        <% Stocks.each do |id, text| %>
+          <li>
+            <label class='radio'>
+              <input type='radio' name='company' value='<%= id %>' id='company_<%= id %>' />
+              <%= text %>
+            </label>
+          </li>
+        <% end %>
+      </ul>
+      <button type='submit' class='btn btn-primary'>Select</button>
+    </form>
